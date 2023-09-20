@@ -99,6 +99,11 @@ function App() {
 
 </div>
 <div className="transparent-div"></div>
+<div className="content">
+      <div className="nuage"></div>
+
+</div>
+<div className="transparent-div"></div>
 
     </>
   )
