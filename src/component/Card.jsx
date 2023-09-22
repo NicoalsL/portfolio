@@ -18,6 +18,22 @@ const Card = ({ title, imageUrl }) => {
       onMouseLeave={handleMouseLeave}
     >
       <div
+        className={`title ${isHovered ? 'hovered' : ''}`}
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+          height: isHovered ? '70%' : '20%', // Ajuste la hauteur au survol
+        }}
+      >
+        <span><h3>{title}</h3></span>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus veritatis at consectetur</p>
+
+          <button className="button">Cliquez ici</button>
+
+      </div>
+      <div
         className="image"
         style={{
           backgroundImage: `url(${imageUrl})`,
@@ -25,9 +41,6 @@ const Card = ({ title, imageUrl }) => {
           backgroundPosition: 'center',
         }}
       />
-      <div className={`title ${isHovered ? 'hovered' : ''}`}>
-        {title}
-      </div>
     </div>
   );
 };

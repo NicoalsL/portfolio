@@ -126,7 +126,7 @@ function App() {
           <div className="projet">
             <Card
                 title="Titre de la carte"
-                imageUrl="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png"
+                imageUrl="https://img.freepik.com/vecteurs-libre/conception-abstraite-page-atterrissage-modele-site-web-application-vague-minimale-abstraite-coloree_1217-4838.jpg"
             />
             
 

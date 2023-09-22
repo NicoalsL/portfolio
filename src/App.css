@@ -78,16 +78,13 @@ body {
   width: 100%;
 } */
 
-
 .card {
-  margin-left: 400px;
-
-  width: 400px; /* Largeur de la carte */
+  margin: 16px;
+  width: 500px; /* Largeur de la carte */
   height: 300px; /* Hauteur de la carte */
   position: relative;
   overflow: hidden;
-  border: 5px solid #ffffff;
-  border-radius: 15px;
+  border-radius: 5px;
   background-color: rgb(92, 92, 254);
 }
 
@@ -103,14 +100,23 @@ body {
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgb(34, 6, 219);
   color: #fff;
   text-align: center;
   padding: 10px;
-  transition: height 0.3s; /* Seule la hauteur de la div title est animée */
-  height: 20%; /* Hauteur de la div title par défaut */
+  transition: transform 0.3s, opacity 0.3s; /* Animation de transition pour la div title */
+  transform: translateY(100%); /* Cachée vers le bas par défaut */
+  opacity: 0; /* Masquée par défaut */
+  display: flex;
+  justify-content: end;
+  align-items: end;
 }
 
 .card:hover .title {
-  height: 70%; /* Hauteur de la div title au survol */
+  transform: translateY(0); /* Montre la div title */
+  opacity: 1; /* Rend la div title visible au survol */
+}
+
+.title p {
+  background-color: #f39;
 }
