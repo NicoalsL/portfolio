@@ -54,6 +54,8 @@ body {
 
 .contenu{
   background-color: red;
+  
+  
 }
 /* 
 .card{
@@ -77,6 +79,8 @@ body {
   height: 100px;
   width: 100%;
 } */
+
+
 
 .card {
   margin: 16px;
@@ -102,14 +106,15 @@ body {
   width: 100%;
   background-color: rgb(34, 6, 219);
   color: #fff;
-  text-align: center;
-  padding: 10px;
   transition: transform 0.3s, opacity 0.3s; /* Animation de transition pour la div title */
   transform: translateY(100%); /* Cachée vers le bas par défaut */
   opacity: 0; /* Masquée par défaut */
   display: flex;
-  justify-content: end;
-  align-items: end;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  
+
 }
 
 .card:hover .title {
@@ -120,3 +125,6 @@ body {
 .title p {
   background-color: #f39;
 }
+
+/* title="Titre de la carte"
+imageUrl="https://img.freepik.com/vecteurs-libre/conception-abstraite-page-atterrissage-modele-site-web-application-vague-minimale-abstraite-coloree_1217-4838.jpg" */

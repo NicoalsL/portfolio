@@ -20,10 +20,6 @@ const Card = ({ title, imageUrl }) => {
       <div
         className={`title ${isHovered ? 'hovered' : ''}`}
         style={{
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          justifyContent: 'space-between',
           height: isHovered ? '70%' : '20%', // Ajuste la hauteur au survol
         }}
       >

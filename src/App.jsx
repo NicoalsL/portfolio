@@ -4,9 +4,38 @@ import { ScrollTrigger } from 'gsap/all';
 import { ScrollToPlugin } from 'gsap/all';
 import './App.css'
 import Card from './component/Card';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+
+
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 // Enregistrez le plugin MotionPath
+
+const cards = [
+  {
+    title: 'Titre de la carte 1',
+    imageUrl: 'URL_de_l_image_1',
+  },
+  {
+    title: 'Titre de la carte 2',
+    imageUrl: 'URL_de_l_image_2',
+  },
+  {
+    title: 'Titre de la carte 3',
+    imageUrl: 'URL_de_l_image_3',
+  },
+  // Ajoutez autant de cartes que vous le souhaitez
+];
+
+const sliderSettings = {
+  dots: true, // Afficher les points de navigation
+  infinite: true, // Boucler en continu
+  speed: 500, // Durée de transition entre les diapositives en millisecondes
+  slidesToShow: 1, // Nombre de diapositives à afficher à la fois
+  slidesToScroll: 1, // Nombre de diapositives à faire défiler à la fois
+};
 
 
 function App() {
@@ -111,41 +140,31 @@ function App() {
   // }, [])
 
   return (
-    <>
-    <div className="header">
-      <div className='header-text'><h1>Lebon Nicolas</h1></div>
-
-    </div>
-    <div className="transparent-div"></div>
-
-    <div className="content">
-      <div className="nuage">
-      </div>
-        <div className="contenu">
-          <h1>Projets</h1>
-          <div className="projet">
-            <Card
-                title="Titre de la carte"
-                imageUrl="https://img.freepik.com/vecteurs-libre/conception-abstraite-page-atterrissage-modele-site-web-application-vague-minimale-abstraite-coloree_1217-4838.jpg"
-            />
-            
-
-          
-          </div>
-
-
-          
+    <div className="App">
+      <div className="header">
+        <div className="header-text">
+          <h1>Lebon Nicolas</h1>
         </div>
-
-</div>
-<div className="transparent-div"></div>
-<div className="content">
-      <div className="nuage"></div>
-
-</div>
-
-    </>
-  )
+      </div>
+      <div className="transparent-div"></div>
+      <div className="content">
+        <div className="nuage"></div>
+          <h1>Projets</h1>
+        <div className="contenu">
+          <Slider {...sliderSettings}>
+            {cards.map((card, index) => (
+              
+              <Card key={index} title={card.title} imageUrl={card.imageUrl} />
+            ))}
+          </Slider>
+        </div>
+      </div>
+      <div className="transparent-div"></div>
+      <div className="content">
+        <div className="nuage"></div>
+      </div>
+    </div>
+  );
 }
 
 export default App
